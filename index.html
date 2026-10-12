@@ -6,54 +6,30 @@
 <meta name="theme-color" content="#765184">
 <title>Convite • Gabrielle 18 anos</title>
 <style>
-*{box-sizing:border-box}
-body{margin:0;padding:16px;background:#f1e5f4;font-family:Arial,sans-serif;color:#4e345d}
-.wrap{max-width:680px;margin:0 auto}
-.poster{position:relative;width:100%;line-height:0;overflow:hidden;border-radius:12px;box-shadow:0 10px 32px #4e345d2b}
-.poster img{display:block;width:100%;height:auto}
-.hit{position:absolute;display:block;border:0;background:transparent;cursor:pointer;border-radius:999px;padding:0}
-.hit:focus-visible{outline:3px solid #fff;outline-offset:2px;box-shadow:0 0 0 5px #68477d}
-#rsvp{left:15.2%;top:74.0%;width:34.5%;height:6.8%}
-#map{left:51.1%;top:74.0%;width:35.0%;height:6.8%}
-#gift{left:25.4%;top:82.4%;width:50.8%;height:6.8%}
-.hint{text-align:center;font-size:14px;line-height:1.5;margin:14px 4px 4px}
-dialog{border:1px solid #c49a45;border-radius:18px;max-width:90%;width:420px;padding:24px;background:#fffafd;color:#4e345d;box-shadow:0 18px 60px #28163055}
-dialog::backdrop{background:#2d173a99}
-dialog h2{color:#805b91;margin-top:0}
-dialog li{margin:8px 0}
-.close{background:#765184;color:#fff;border:0;border-radius:999px;padding:12px 18px;font-size:14px;cursor:pointer}
-@media(min-width:700px){body{padding:24px}}
+*{box-sizing:border-box} body{margin:0;padding:16px;background:#f1e5f4;font-family:Arial,sans-serif;color:#4e345d}.wrap{max-width:680px;margin:0 auto}.poster{position:relative;width:100%;line-height:0;overflow:hidden;border-radius:12px;box-shadow:0 10px 32px #4e345d2b}.poster img{display:block;width:100%;height:auto}.hit{position:absolute;display:block;border:0;background:transparent;cursor:pointer;border-radius:999px;padding:0}.hit:focus-visible{outline:3px solid #fff;outline-offset:2px;box-shadow:0 0 0 5px #68477d}#rsvp{left:15.2%;top:74%;width:34.5%;height:6.8%}#map{left:51.1%;top:74%;width:35%;height:6.8%}#gift{left:25.4%;top:82.4%;width:50.8%;height:6.8%}.hint{text-align:center;font-size:14px;line-height:1.5;margin:14px 4px 4px}.gift-panel{display:none;margin:16px auto 0;padding:20px;border:1px solid #c49a45;border-radius:16px;background:#fffafd;line-height:1.5;box-shadow:0 8px 24px #4e345d20}.gift-panel h2{margin:0 0 8px;color:#805b91}.gift-panel li{margin:8px 0}.gift-panel button{background:#765184;color:#fff;border:0;border-radius:999px;padding:12px 18px;font-size:14px;cursor:pointer}@media(min-width:700px){body{padding:24px}}
 </style>
 </head>
 <body>
 <main class="wrap">
   <div class="poster" aria-label="Convite de aniversário de Gabrielle, 18 anos">
     <img src="convite.jpg" alt="Convite lilás e dourado de Gabrielle, 18 anos, em 31 de outubro de 2026 às 17h, na Rua 19, casa 34, Cohatrac 2.">
-    <a class="hit" id="rsvp" href="#" target="_blank" rel="noopener" aria-label="Confirmar presença pelo WhatsApp" title="Confirmar presença"></a>
-    <a class="hit" id="map" href="https://www.google.com/maps/search/?api=1&query=Rua+19+casa+34+Cohatrac+2+Sao+Jose+de+Ribamar+Maranhao" target="_blank" rel="noopener" aria-label="Ver localização no mapa" title="Ver localização"></a>
+    <a class="hit" id="rsvp" href="https://wa.me/?text=Ol%C3%A1%2C%20Gabrielle!%20%F0%9F%92%9C%20Confirmo%20minha%20presen%C3%A7a%20na%20sua%20festa%20de%2018%20anos%2C%20no%20dia%2031%2F10%2F2026%20%C3%A0s%2017h.%20%E2%9C%A8" target="_blank" rel="noopener" aria-label="Confirmar presença pelo WhatsApp" title="Confirmar presença"></a>
+    <a class="hit" id="map" href="https://www.google.com/maps/search/?api=1&query=Rua%2019%2C%20casa%2034%2C%20Cohatrac%202%2C%20S%C3%A3o%20Lu%C3%ADs%2C%20Maranh%C3%A3o%2C%20Brasil" target="_blank" rel="noopener" aria-label="Ver localização no mapa" title="Ver localização"></a>
     <button class="hit" id="gift" type="button" aria-label="Abrir sugestões de presentes" title="Sugestões de presentes"></button>
   </div>
   <p class="hint">Toque nos botões do convite para confirmar presença, abrir o mapa ou ver sugestões de presentes.</p>
+  <section class="gift-panel" id="giftPanel" aria-live="polite">
+    <h2>♡ Sugestões de presentes</h2>
+    <p>Se quiser presentear a Gabrielle, aqui vão algumas ideias:</p>
+    <ul><li>Pix (a partir de R$ 30,00)</li><li>Roupa</li><li>Sapato (tamanho 34–35)</li><li>Maquiagem</li></ul>
+    <button id="closeGift" type="button">Fechar sugestões</button>
+  </section>
 </main>
-<dialog id="giftDialog">
-  <h2>♡ Sugestões de presentes</h2>
-  <p>Se quiser presentear a Gabrielle, aqui vão algumas ideias:</p>
-  <ul>
-    <li>Perfumes ou body splash</li>
-    <li>Maquiagem e produtos de beleza</li>
-    <li>Bolsas e acessórios</li>
-    <li>Roupas</li>
-    <li>Joias e bijuterias delicadas</li>
-    <li>Vale-presente</li>
-  </ul>
-  <button class="close" id="closeDialog" type="button">Fechar</button>
-</dialog>
 <script>
-const message = "Olá, Gabrielle! 💜 Confirmo minha presença na sua festa de 18 anos, no dia 31/10/2026 às 17h. ✨";
-document.getElementById("rsvp").href = "https://wa.me/?text=" + encodeURIComponent(message);
-const dialog = document.getElementById("giftDialog");
-document.getElementById("gift").addEventListener("click", () => dialog.showModal());
-document.getElementById("closeDialog").addEventListener("click", () => dialog.close());
+const giftButton=document.getElementById('gift');
+const giftPanel=document.getElementById('giftPanel');
+giftButton.addEventListener('click',function(){giftPanel.style.display='block';giftPanel.scrollIntoView({behavior:'smooth',block:'nearest'});});
+document.getElementById('closeGift').addEventListener('click',function(){giftPanel.style.display='none';giftButton.focus();});
 </script>
 </body>
 </html>
